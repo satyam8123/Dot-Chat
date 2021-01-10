@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="3dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_face_black"/>
+
+        <ImageView
+            android:id="@+id/onlineStatusIv"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:rotation="90"
+            android:src="@drawable/diamond_offline" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="His Name"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_toEndOf="@+id/profileIv"/>
+        <TextView
+            android:id="@+id/lastMessageTv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:maxLines="1"
+            android:text="The last message"
+            android:textColor="#2C2C2C"
+            android:layout_toEndOf="@+id/profileIv"
+            android:layout_below="@+id/nameTv"/>
+
+        <TextView
+            android:id="@+id/unseencount"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toLeftOf="@id/onlineStatusIv"
+            android:background="@drawable/countround"
+            android:text="4"
+            android:textSize="15dp"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

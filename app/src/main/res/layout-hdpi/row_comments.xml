@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="1dp"
+    app:contentPadding="2dp"
+    app:cardBackgroundColor="#fff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_face_black"/>
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_toRightOf="@+id/avatarIv"
+            android:text="Satya"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/timeTv"
+            android:text=" 12/21/300"
+            android:textSize="9sp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/commentTv"
+            android:layout_below="@+id/nameTv"
+            android:layout_toEndOf="@+id/avatarIv"
+            android:text="This is Commment"
+            android:textColor="#000"
+            android:textSize="10sp"
+            android:layout_toRightOf="@+id/avatarIv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

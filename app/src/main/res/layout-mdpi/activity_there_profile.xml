@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFAC00"
+    android:backgroundTintMode="screen"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ThereProfileActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="#fff">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="-37dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/avatarIv"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_face_black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/nameTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="20sp"
+                            android:layout_marginTop="25dp"
+                            android:textColor="#000"
+                            android:layout_marginBottom="4dp"
+                            />
+                        <TextView
+                            android:id="@+id/emailTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#000"
+                            android:layout_marginBottom="4dp"/>
+                        <TextView
+                            android:id="@+id/phoneTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#000" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_posts"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+    </ScrollView>

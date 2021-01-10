@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPostActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+        <EditText
+            android:id="@+id/pTitleEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/pImageIv"
+            android:hint="Enter Title"
+            android:padding="10dp"
+            android:singleLine="true" />
+        <ImageView
+            android:id="@+id/pImageIv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_alignParentEnd="true"
+            android:background="#175A5A5A"/>
+
+        <ImageView
+            android:id="@+id/addphotopost"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="24dp"
+            android:src="@drawable/ic_photo_post" />
+
+        <EditText
+            android:id="@+id/pDescriptionEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pImageIv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="start"
+            android:hint="Enter description"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="100dp"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/pUploadBtn"
+            android:text="Upload "
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:textColor="#00CBFF"
+            android:backgroundTint="#fff"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:layout_below="@id/pDescriptionEt"
+            android:layout_height="80dp"/>
+    </RelativeLayout>
+
+
+
+</ScrollView>

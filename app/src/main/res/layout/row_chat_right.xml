@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="2dp"
+    android:id="@+id/messageLayout"
+    android:orientation="vertical"
+    android:layout_marginTop="7dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/r1">
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01/01/2020 05:09pm"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="2dp"
+            android:textColor="#BCFAFAFA"
+            android:textSize="5sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/r2"
+        android:layout_below="@+id/r1"
+        android:layout_width="300dp"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/profileTv"
+            app:civ_border_color="@null"
+            android:visibility="gone"
+            android:src="@drawable/ic_face_black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_sender"
+            android:text="helloo bro"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/messageTv"
+            android:visibility="gone"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:padding="8dp"/>
+        <com.zolad.zoominimageview.ZoomInImageView
+            android:id="@+id/messageIv"
+            android:layout_width="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/profileTv"
+            android:src="@drawable/ic_face_black"
+            android:scaleType="fitCenter"
+            android:background="@drawable/bg_sender"/>
+        <RelativeLayout
+            android:id="@+id/pdfMessage"
+            android:layout_width="248dp"
+            android:layout_toRightOf="@+id/profileTv"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:background="@drawable/bg_sender"
+            android:layout_height="40dp">
+            <ImageView
+                android:id="@+id/messagePdf"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_pdf"
+                android:scaleType="fitCenter" />
+            <TextView
+                android:id="@+id/filename"
+                android:text="File name.pdf"
+                android:textColor="#000"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/messagePdf"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/r2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/isSeenTv"
+            android:gravity="end"
+            android:textColor="#FF6F00"
+            android:layout_marginRight="2dp"
+            android:textAlignment="textEnd"
+            android:textSize="9sp"
+            android:layout_alignParentEnd="true"
+            android:text="delivered"/>
+    </RelativeLayout>
+
+</RelativeLayout>

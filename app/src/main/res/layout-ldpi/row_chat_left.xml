@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/messageLayout"
+    android:layout_marginTop="7dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/r1">
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_width="wrap_content"
+            android:text="01/01/2020 05:09pm"
+            android:textColor="#C8FFFFFF"
+            android:textSize="5sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/isSeenTv"
+            android:layout_toRightOf="@+id/timeTv"
+            android:layout_marginLeft="4dp"
+            android:text="delivered"
+            android:visibility="gone"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/r4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/r1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/profileTv"
+            app:civ_border_color="@null"
+            android:src="@drawable/ic_face_black"/>
+        <TextView
+            android:layout_marginLeft="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profileTv"
+            android:text="hello "
+            android:id="@+id/messageTv"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:textColor="#fff"
+            android:background="@drawable/bg_receiver"/>
+        <com.zolad.zoominimageview.ZoomInImageView
+            android:id="@+id/messageIv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="15dp"
+            android:layout_toRightOf="@+id/profileTv"
+            android:src="@drawable/ic_face_black"
+            android:scaleType="fitCenter"
+            android:background="@drawable/bg_receiver"/>
+        <RelativeLayout
+            android:id="@+id/pdfMessage"
+            android:layout_width="233dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="47dp"
+            android:layout_toRightOf="@+id/profileTv"
+            android:background="@drawable/bg_receiver"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/messagePdf"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_pdf" />
+
+            <TextView
+                android:id="@+id/filename"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/messagePdf"
+                android:gravity="center_vertical"
+                android:text="File name.pdf"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
